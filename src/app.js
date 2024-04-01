@@ -1,12 +1,11 @@
-/* eslint-disable */
 import "bootstrap";
 import "./style.css";
-
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
+
 window.onload = function() {
-  let generatorExcuse = () => {
+  let excuseGenerator = () => {
     let who = ["The dog", "My grandma", "The mailman", "My bird"];
     let action = ["ate", "peed", "crushed", "broke"];
     let what = ["my homework", "my phone", "the car"];
@@ -17,7 +16,7 @@ window.onload = function() {
       "during my lunch",
       "while I was praying"
     ];
-
+    // Generamos los index
     let whoIndex = Math.floor(Math.random() * who.length);
     let actionIndex = Math.floor(Math.random() * action.length);
     let whatIndex = Math.floor(Math.random() * what.length);
@@ -25,6 +24,5 @@ window.onload = function() {
 
     return `${who[whoIndex]}  ${action[actionIndex]}  ${what[whatIndex]}  ${when[whenIndex]}`;
   };
-
-  document.querySelector("#excuse").innerHTML = generatorExcuse();
+  document.querySelector("#excuse").innerHTML = excuseGenerator();
 };
